@@ -1,7 +1,8 @@
 {
-  "name": "framework7-template-vue-webpack",
-  "version": "2.0.0",
-  "description": "Framework7 Vue Webpack starter app template",
+  "name": "Tampa-Underground-Coaching",
+  "version": "0.1.0",
+  "description": "PWA for empowering Underground Coaching Department",
+  "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "node server.js",
@@ -11,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/framework7io/framework7-template-vue-webpack.git"
+    "url": ""
   },
   "keywords": [
     "ios",
@@ -24,12 +25,12 @@
     "app",
     "f7"
   ],
-  "author": "Vladimir Kharlampidi",
-  "license": "MIT",
+  "author": "Josh Loya",
+  "license": "UNLICENSED",
   "bugs": {
     "url": "https://github.com/framework7io/framework7-template-vue-webpack/issues"
   },
-  "homepage": "http://framework7.io/vue/",
+  "homepage": "http://underground.coach/",
   "dependencies": {
     "express": "4.16.2",
     "framework7": "^2.0.7",
