@@ -10,10 +10,17 @@
 </template>
 <script>
 import { mapState } from 'vuex'
+import { f7Page, f7Navbar, f7NavTitle, f7Block } from 'framework7-vue'
 
 export default {
   computed: mapState([
     'title',
   ]),
+  components: {
+    f7Page,
+    f7Navbar,
+    f7NavTitle,
+    f7Block,
+  }
 }
 </script>

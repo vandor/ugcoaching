@@ -3,10 +3,10 @@ import Vue from 'vue';
 import store from './store';
 
 // Import F7
-import Framework7 from 'framework7/dist/framework7.esm.bundle.js';
+import Framework7 from 'framework7';
 
 // Import F7 Vue Plugin
-import Framework7Vue from 'framework7-vue/dist/framework7-vue.esm.bundle.js';
+import Framework7Vue from 'framework7-vue';
 
 // Import F7 Styles
 import Framework7Styles from 'framework7/dist/css/framework7.css';
