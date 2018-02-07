@@ -1,5 +1,6 @@
 // Import Vue
 import Vue from 'vue';
+import store from './store';
 
 // Import F7
 import Framework7 from 'framework7/dist/framework7.esm.bundle.js';
@@ -27,6 +28,7 @@ Vue.use(Framework7Vue, Framework7)
 new Vue({
   el: '#app',
   template: '<app/>',
+  store,
   // Init Framework7 by passing parameters here
   framework7: {
     id: 'io.framework7.testapp', // App bundle ID
