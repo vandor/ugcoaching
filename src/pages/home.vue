@@ -3,24 +3,47 @@
     <f7-navbar>
       <f7-nav-title>{{ title }}</f7-nav-title>
     </f7-navbar>
-    <f7-block strong>
-      <p>Here is your blank Framework7 app. Let's see what we have here.</p>
-    </f7-block>
+
+    <f7-list>
+      <f7-card
+        v-for="(note, index) in notes"
+        :key="index">
+        <f7-card-header>
+          <div>{{ note.fields.Microchurch }}</div>
+          <div>{{ note.fields.Date }}</div>
+        </f7-card-header>
+        <f7-card-content>
+          <p>{{ note.fields.Notes }}</p>
+        </f7-card-content>
+      </f7-card>
+    </f7-list>
   </f7-page>
 </template>
 <script>
 import { mapState } from 'vuex'
-import { f7Page, f7Navbar, f7NavTitle, f7Block } from 'framework7-vue'
+import {
+  f7Card,
+  f7CardContent,
+  f7CardHeader,
+  f7List,
+  f7NavTitle,
+  f7Navbar,
+  f7Page,
+} from 'framework7-vue'
 
 export default {
   computed: mapState([
     'title',
+    'notes',
   ]),
   components: {
-    f7Page,
-    f7Navbar,
+    f7Card,
+    f7CardContent,
+    f7CardHeader,
+    f7List,
     f7NavTitle,
-    f7Block,
+    f7Navbar,
+    f7Page,
   }
 }
 </script>
