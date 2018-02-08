@@ -36,7 +36,8 @@
     "framework7-icons": "^0.8.9",
     "framework7-vue": "^2.0.7",
     "material-design-icons": "^3.0.1",
-    "vue": "^2.5.2"
+    "vue": "^2.5.2",
+    "vuex": "3.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
