@@ -8,7 +8,7 @@
     "start": "node server.js",
     "build": "node build/build.js",
     "copy-fonts": "cpy node_modules/framework7-icons/fonts/*.* src/fonts && cpy node_modules/material-design-icons/iconfont/*.{eot,ttf,woff,woff2} src/fonts",
-    "postinstall": "npm run copy-fonts"
+    "postinstall": "npm run copy-fonts && npm run build"
   },
   "repository": {
     "type": "git",
