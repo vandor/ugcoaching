@@ -1,4 +1,5 @@
-import HomePage from './pages/home.vue';
+import WelcomePage from './pages/welcome.vue';
+import NotesPage from './pages/notes.vue';
 import AboutPage from './pages/about.vue';
 import FormPage from './pages/form.vue';
 import DynamicRoutePage from './pages/dynamic-route.vue';
@@ -10,7 +11,11 @@ import PanelRightPage from './pages/panel-right.vue';
 export default [
   {
     path: '/',
-    component: HomePage,
+    component: WelcomePage,
+  },
+  {
+    path: '/notes',
+    component: NotesPage,
   },
   {
     path: '/panel-left/',
