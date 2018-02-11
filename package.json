@@ -47,6 +47,7 @@
     "copy-webpack-plugin": "^4.0.1",
     "cpy-cli": "^1.0.1",
     "css-loader": "^0.28.0",
+    "dotenv-webpack": "1.5.4",
     "eventemitter3": "3.0.1",
     "express": "4.16.2",
     "extract-text-webpack-plugin": "^3.0.0",
