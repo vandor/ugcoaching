@@ -27,7 +27,7 @@
     "f7"
   ],
   "author": "Josh Loya",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/framework7io/framework7-template-vue-webpack/issues"
   },
