@@ -1,66 +1,27 @@
-# Framework7 Vue + Webpack App Template
+# Undergound Coaching
+This app is for coaches in the [Tampa Underground Network](http://www.tampaunderground.com/).
+It's the product of a coding sprint to create the Minimum Viable Product (MVP) of a mobile app for the Tampa Underground's Coaching Department.
+There's an instance running on Heroku: http://ugcoaching.herokuapp.com/
+
+# The Coaching Department
+The coaching department exists to provide fresh eyes and listening hearts for kingdom-minded leaders, helping them pursue what God has called them to in our city. We think every believer has the spiritual DNA in them to grow a faith community which follows Jesus and plays its part in engaging every evil -- but sometimes people are unsure where to begin or what next steps to take. What dream has God deposited in you? Whether you are just getting started or have been leading a microchurch for a while and feel like you could benefit from some fresh input, we would love to walk alongside you. Get in touch at [Underground.Coach](http://underground.coach/).
+
+# Tech Specs
+The app is a single-page hybrid app written with Vue.js and the Framework7 UI toolkit. An API served by Express.js in Node provides the data, proxied from an Airtable database. User access to the API is authenticated with Auth0.
+
+* [Vue.js](https://vuejs.org/)
+* [Framework7](https://framework7.io/)
+* [Express.js](https://expressjs.com/)
+* [Node.js](https://nodejs.org/)
+* [Airtable.js](https://github.com/Airtable/airtable.js)
+* [Auth0](https://auth0.com/)
+* [Heroku](https://www.heroku.com/)
+
+
+# Based on template: Framework7 Vue + Webpack App
 
 A full-featured Framework7 Vue with Webpack setup with hot-reload & css extraction. Based on [Vue Webpack Boilerplate](https://github.com/vuejs-templates/webpack)
 
-## Usage
-
-### 1. Download this repository
-```
-git clone https://github.com/framework7io/framework7-template-vue-webpack my-app
-```
-
-Repository will be downloaded into `my-app/` folder
-
-### 2. Instal dependencies
-
-Go to the downloaded repository folder and run:
-```
-npm install
-```
-
-This will download latest version of Framework7, Framework7-Vue, Vue and required icon fonts (to `/src/fonts/`)
-
-### 3. Run the app
-
-```
-npm run dev
-```
-
-App will be opened in browser at `http://localhost:8080/`
-
-### 4. Build app for production
-
-```
-npm run build
-```
-
-The output will be at `www/` folder
-
-## Use with cordova
-
-Just put the contents of `www` folder in your cordova's project root `www` folder
-
-## One command install
-
-```
-git clone https://github.com/framework7io/framework7-template-vue-webpack my-app &&
-cd my-app &&
-npm install &&
-npm run dev
-```
-
-## Build Setup
-
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-```
 
 ## Project Structure
 
