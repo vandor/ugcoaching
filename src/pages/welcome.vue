@@ -1,9 +1,6 @@
 <template>
   <f7-page>
     <f7-navbar>
-      <f7-nav-left>
-        <img src="../img/logo.png" class="logo">
-      </f7-nav-left>
       <f7-nav-right>
         <f7-link @click="login()">Login</f7-link>
       </f7-nav-right>
@@ -12,6 +9,9 @@
     <f7-swiper pagination :params="swiperParams" class="main-swiper">
       <f7-swiper-slide class="slide-1">
         <div class="slide-content">
+          <f7-row style="text-align: center">
+            <img src="../img/logo.png" class="logo">
+          </f7-row>
           <f7-row>
             <f7-col class="title-container"><h1>Underground Coaching</h1></f7-col>
           </f7-row>
@@ -91,9 +91,10 @@ export default {
 </script>
 <style scoped>
 .logo {
-  margin: 8px;
-  width: 35px;
-  height: 35px;
+  width: 130px;
+  height: 130px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .main-swiper {
   width: 100%;
@@ -113,6 +114,7 @@ export default {
 }
 .main-swiper .slide-1 {
   background-image: url("../img/welcome_header.jpg");
+  background-position: center;
   background-size: cover;
 }
 
@@ -142,7 +144,7 @@ h3 {
   text-transform: uppercase;
 }
 .title-container {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 hr {
   color: #ddd;
