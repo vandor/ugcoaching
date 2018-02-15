@@ -17,16 +17,14 @@
           </f7-row>
           <f7-row><f7-col><hr></f7-col></f7-row>
           <f7-row>
-            <f7-col><h2>
+            <f7-col><h3>
               You have a missional dream<br>
               We have the resources to help
-            </h2></f7-col>
+            </h3></f7-col>
           </f7-row>
           <f7-row><f7-col><hr></f7-col></f7-row>
         </div>
       </f7-swiper-slide>
-      <f7-swiper-slide>Slide 2</f7-swiper-slide>
-      <f7-swiper-slide>Slide 3</f7-swiper-slide>
     </f7-swiper>
 
 
@@ -123,14 +121,23 @@ export default {
 }
 h1 {
   color: #e0ca00;
+  font-family: 'Lato', sans-serif;
   font-size: 32px;
+  font-style: normal;
+  font-weight: 300;
+  letter-spacing: .07822222222222222px;
+  line-height: 1.1em;
   text-align: center;
   text-transform: uppercase;
 }
-h2 {
+h3 {
   color: #adadad;
+  font-family: 'Lato', sans-serif;
   font-size: 14px;
-  line-height: 28px;
+  font-weight: 400;
+  letter-spacing: .15em;
+  line-height: 2em;
+  margin: 0;
   text-align: center;
   text-transform: uppercase;
 }
@@ -140,12 +147,18 @@ h2 {
 hr {
   color: #ddd;
   background-color: #ddd;
-  height: 1px;
   border: none;
+  height: 1px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
-
 </style>
+
 <style>
+.ios .swiper-pagination-bullet-active,
+.md .swiper-pagination-bullet-active {
+  background-color: #e0ca00;
+}
 .navbar {
   /*
   background-color: #404040 !important;

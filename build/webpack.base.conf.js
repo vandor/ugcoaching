@@ -1,5 +1,6 @@
 'use strict'
 const path = require('path')
+const GoogleFontsPlugin = require('google-fonts-webpack-plugin')
 const utils = require('./utils')
 const config = require('../config')
 const vueLoaderConfig = require('./vue-loader.conf')
@@ -29,6 +30,14 @@ module.exports = {
       '@': resolve('src'),
     }
   },
+  plugins: [
+    new GoogleFontsPlugin({
+      fonts: [
+        { family: "Lato", variants: [ "300", "400", "700" ] }
+      ],
+      local: false,
+    })
+  ],
   module: {
     rules: [
       {
