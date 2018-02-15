@@ -22,7 +22,7 @@
       </f7-swiper-slide>
     </f7-swiper>
 
-    <f7-toolbar bottom-md class="welcome-toolbar">
+    <f7-toolbar bottom-md class="welcome-toolbar" color="white">
       <f7-link @click="login()">Login</f7-link>
     </f7-toolbar>
 
@@ -147,6 +147,12 @@ hr {
   border: none;
   height: 1px;
   margin: 0 10px;
+}
+.md .welcome-toolbar:not(.messagebar) {
+  background-color: #f7f7f8;
+}
+.welcome-toolbar a {
+  color: #404040;
 }
 </style>
 
