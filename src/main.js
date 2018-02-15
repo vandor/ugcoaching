@@ -33,8 +33,8 @@ new Vue({
   store,
   // Init Framework7 by passing parameters here
   framework7: {
-    id: 'io.framework7.testapp', // App bundle ID
-    name: 'Framework7', // App name
+    id: 'coach.underground.ugcoaching', // App bundle ID
+    name: 'Underground Coaching', // App name
     theme: 'auto', // Automatic theme detection
     // App routes
     routes: Routes,
