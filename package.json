@@ -49,6 +49,7 @@
     "css-loader": "^0.28.0",
     "eventemitter3": "3.0.1",
     "express": "4.16.2",
+    "express-sslify": "1.2.0",
     "extract-text-webpack-plugin": "^3.0.0",
     "file-loader": "^1.1.4",
     "foreman": "2.0.0",
