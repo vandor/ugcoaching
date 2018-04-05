@@ -1,5 +1,5 @@
 <template>
-  <f7-page>
+  <f7-page @page:init="onPageInit">
 
     <f7-swiper pagination :params="swiperParams" class="main-swiper">
       <f7-swiper-slide class="slide-1">
@@ -23,13 +23,13 @@
     </f7-swiper>
 
     <f7-toolbar bottom-md class="welcome-toolbar" color="white">
-      <f7-link @click="login()">Login</f7-link>
+      <f7-link v-if="!isAuthenticated()" @click="login()">Login</f7-link>
+      <f7-link v-if="isAuthenticated()" href="/notes">See Notes</f7-link>
     </f7-toolbar>
 
   </f7-page>
 </template>
 <script>
-import { mapState } from 'vuex'
 import {
   f7Block,
   f7BlockTitle,
@@ -43,20 +43,12 @@ import {
 } from 'framework7-vue'
 import AuthService from '../auth/AuthService'
 const auth = new AuthService()
-const { login, logout, authenticated, authNotifier } = auth
+const { isAuthenticated, login } = auth
 
 export default {
-  computed: mapState([
-    'title',
-    'notes',
-  ]),
   data () {
-    authNotifier.on('authChange', authState => {
-      this.authenticated = authState.authenticated
-    })
     return {
       auth,
-      authenticated,
       swiperParams: {
         autoplay: {
           delay: 5 * 1000,
@@ -67,8 +59,11 @@ export default {
     }
   },
   methods: {
+    isAuthenticated,
     login,
-    logout
+    onPageInit: function() {
+      auth.handleAuthentication(this.$f7router);
+    },
   },
   components: {
     f7Block,
