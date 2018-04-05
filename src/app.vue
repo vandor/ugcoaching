@@ -6,7 +6,7 @@
     <f7-statusbar></f7-statusbar>
 
     <!-- Main View -->
-    <f7-view id="main-view" url="/" main></f7-view>
+    <f7-view main :push-state="true"></f7-view>
 
   </div>
 </template>
