@@ -23,6 +23,12 @@ import Routes from './routes.js'
 // Import App Component
 import App from './app';
 
+// Theme
+let theme = 'auto';
+if (document.location.search.indexOf('theme=') >= 0) {
+  theme = document.location.search.split('theme=')[1].split('&')[0];
+}
+
 // Init F7 Vue Plugin
 Vue.use(Framework7Vue, Framework7)
 
@@ -35,7 +41,7 @@ new Vue({
   framework7: {
     id: 'coach.underground.ugcoaching', // App bundle ID
     name: 'Underground Coaching', // App name
-    theme: 'auto', // Automatic theme detection
+    theme, // Automatic theme detection
     // App routes
     routes: Routes,
   },
