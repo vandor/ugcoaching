@@ -4,8 +4,9 @@ import store from './store';
 
 // Import F7
 import Framework7 from 'framework7';
+import Dialog from 'framework7/dist/components/dialog/dialog.js'
 import Swiper from 'framework7/dist/components/swiper/swiper.js'
-Framework7.use([ Swiper ])
+Framework7.use([ Dialog, Swiper ])
 
 // Import F7 Vue Plugin
 import Framework7Vue from 'framework7-vue';
