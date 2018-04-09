@@ -1,5 +1,5 @@
 <template>
-  <f7-page>
+  <f7-page @page:init="onPageInit">
     <f7-navbar>
       <f7-nav-title>{{ title }}</f7-nav-title>
     </f7-navbar>
@@ -20,7 +20,7 @@
   </f7-page>
 </template>
 <script>
-import { mapState } from 'vuex'
+import { mapActions, mapState } from 'vuex'
 import {
   f7Card,
   f7CardContent,
@@ -36,6 +36,14 @@ export default {
     'title',
     'notes',
   ]),
+  methods: {
+    ...mapActions([
+      'fetchNotes',
+    ]),
+    onPageInit() {
+      this.fetchNotes();
+    },
+  },
   components: {
     f7Card,
     f7CardContent,
