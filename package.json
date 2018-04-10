@@ -4,7 +4,9 @@
   "description": "PWA for empowering Underground Coaching Department",
   "private": true,
   "scripts": {
-    "dev": "nf run -- webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "dev": "concurrently -k -p \"[{name}]\" -c \"black.bgBlue.bold,black.bgGreen.bold\" -n \"CLIENT,SERVER\" \"npm run dev-client\" \"npm run dev-server\"",
+    "dev-client": "nf run -- webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "dev-server": "PORT=8081 npm run start",
     "start": "nf start",
     "build": "nf run node build/build.js",
     "rebuild-prod": "NODE_ENV=production git clean -dfx && npm install --production",
@@ -44,6 +46,7 @@
     "babel-preset-env": "^1.3.2",
     "babel-preset-stage-2": "^6.22.0",
     "chalk": "^2.0.1",
+    "concurrently": "3.5.1",
     "connect-history-api-fallback": "1.5.0",
     "copy-webpack-plugin": "^4.0.1",
     "cpy-cli": "^1.0.1",
