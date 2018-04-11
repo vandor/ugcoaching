@@ -1,12 +1,13 @@
+const env = require('./app/env');
 const express = require('express');
 const path = require('path');
 const serveStatic = require('serve-static');
 const history = require('connect-history-api-fallback');
 const notesRoutes = require('./app/api/notes');
-const port = process.env.PORT || 8080;
+const port = env.PORT;
 
 app = express();
-if (process.env.NODE_ENV === 'production') {
+if (env.isProduction) {
   const enforce = require('express-sslify');
   app.use(enforce.HTTPS({ trustProtoHeader: true }));
 }
