@@ -1,18 +1,18 @@
-var express = require('express');
-var path = require('path');
-var serveStatic = require('serve-static');
-var history = require('connect-history-api-fallback');
-var notesRoutes = require('./app/api/notes');
-var port = process.env.PORT || 8080;
+const express = require('express');
+const path = require('path');
+const serveStatic = require('serve-static');
+const history = require('connect-history-api-fallback');
+const notesRoutes = require('./app/api/notes');
+const port = process.env.PORT || 8080;
 
 app = express();
 if (process.env.NODE_ENV === 'production') {
-  var enforce = require('express-sslify');
+  const enforce = require('express-sslify');
   app.use(enforce.HTTPS({ trustProtoHeader: true }));
 }
 
 const staticMiddleware = serveStatic(path.join(__dirname, '/www'));
-var apiRoutes = express.Router();
+const apiRoutes = express.Router();
 apiRoutes.use('/notes', notesRoutes);
 
 app.use(staticMiddleware);
