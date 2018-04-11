@@ -2,7 +2,7 @@ var express = require('express');
 var path = require('path');
 var serveStatic = require('serve-static');
 var history = require('connect-history-api-fallback');
-var notesRoutes = require('./api/notes.js');
+var notesRoutes = require('./app/api/notes');
 var port = process.env.PORT || 8080;
 
 app = express();
